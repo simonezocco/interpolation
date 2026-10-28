@@ -7,7 +7,7 @@ file(GLOB RUN_SOURCES
 
 foreach(runsource ${RUN_SOURCES})
    GET_FILENAME_COMPONENT(filename ${runsource} NAME_WE)
-   add_executable(${filename} ${filename}.cc ${source_files})
+   add_executable(${filename} src/${filename}.cc ${source_files}) #ho messo src/
 
    target_include_directories(${filename}
       PRIVATE
